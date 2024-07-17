@@ -21,15 +21,11 @@ public class KVDBConfig {
     @Value("${spring.data.redis.port}")
     private Integer port;
 
-    @Value("${spring.data.redis.password}")
-    private String password;
-
     @Bean
     LettuceConnectionFactory lettuceConnectionFactory() {
         RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration();
         redisStandaloneConfiguration.setHostName(host);
         redisStandaloneConfiguration.setPort(port);
-        redisStandaloneConfiguration.setPassword(password);
         return new LettuceConnectionFactory(redisStandaloneConfiguration);
     }
     @Bean
