@@ -1,0 +1,37 @@
+services:
+  urlshortener-service-one:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8081:8080
+    depends_on:
+      - postgres
+      - redis
+    restart: no
+  postgres:
+    container_name: 'postgres-container'
+    image: postgres:16.0-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres-volume:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: phongtran
+      POSTGRES_PASSWORD: phongtran123
+      POSTGRES_DB: db1
+    restart: unless-stopped
+  redis:
+    image: redis/redis-stack-server:latest
+    container_name: redis-container
+    ports:
+      - 6379:6379
+    environment:
+      - REDIS_ARGS=--requirepass phongtran123
+    volumes:
+      - redis-volume:/data
+    restart: unless-stopped
+
+volumes:
+  postgres-volume:
+  redis-volume:
