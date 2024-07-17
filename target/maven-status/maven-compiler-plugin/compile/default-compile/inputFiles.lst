@@ -1,0 +1,11 @@
+/home/hp/Desktop/Spring/urlshortener/src/main/java/com/example/urlshortener/KVDBConfig.java
+/home/hp/Desktop/Spring/urlshortener/src/main/java/com/example/urlshortener/RDBConfig.java
+/home/hp/Desktop/Spring/urlshortener/src/main/java/com/example/urlshortener/UrlshortenerApplication.java
+/home/hp/Desktop/Spring/urlshortener/src/main/java/com/example/urlshortener/controller/DataURLController.java
+/home/hp/Desktop/Spring/urlshortener/src/main/java/com/example/urlshortener/controller/URLController.java
+/home/hp/Desktop/Spring/urlshortener/src/main/java/com/example/urlshortener/dto/LongURLDto.java
+/home/hp/Desktop/Spring/urlshortener/src/main/java/com/example/urlshortener/dto/ShortURLDto.java
+/home/hp/Desktop/Spring/urlshortener/src/main/java/com/example/urlshortener/entity/URL.java
+/home/hp/Desktop/Spring/urlshortener/src/main/java/com/example/urlshortener/repository/URLRepository.java
+/home/hp/Desktop/Spring/urlshortener/src/main/java/com/example/urlshortener/service/URLConversionService.java
+/home/hp/Desktop/Spring/urlshortener/src/main/java/com/example/urlshortener/service/URLService.java

@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: urlshortener
+  datasource:
+    hikari:
+      jdbc-url: jdbc:postgresql://postgres-container:5432/urlshortener
+      username: phongtran
+      password: phongtran123
+      maximum-pool-size: 30
+      minimum-idle: 5
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  data:
+    redis:
+      host: redis-container
+      port: 6379
+      password: phongtran123
+    jdbc:
+      dialect: postgresql
+server:
+  servlet:
+    context-path: /api/v1
+
